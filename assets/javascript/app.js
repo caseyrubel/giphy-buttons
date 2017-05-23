@@ -33,7 +33,7 @@ $("button").on("click", function() {
         animalDiv.append(p);
         animalDiv.append(animalImage);
         // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-        $("#gifs-appear-here").prepend(animalDiv);
+        $("#giphy-view").prepend(animalDiv);
       }
   	});
 });
@@ -41,10 +41,9 @@ $("button").on("click", function() {
 $("#submit").click(function(event){
 	event.preventDefault();
 	animal = $("#gif-input").val();
-	a = $("<button>");
-	a.html(animal);
-	a.addClass("button");
+	a = $("<button class='button'></button>");
 	$("#buttons-view").append(a);
+	a.html(animal);
 })
 
 
